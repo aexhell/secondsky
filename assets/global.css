@@ -86,24 +86,3 @@ a {
    opacity: 0.25;
    background-repeat: no-repeat;
 }
-
-@keyframes secondsky {
-   0% {
-      background-size: 100% 0%;
-   }
-   50% {
-      background-size: 200% 200%;
-   }
-   100% {
-      background-size: 100% 0%;
-   }
-}
-
-@keyframes pulse {
-   0% {
-      opacity: 1
-   }
-   100% {
-      opacity: 0
-   }
-}
