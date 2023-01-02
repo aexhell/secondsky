@@ -6,7 +6,7 @@ const _ = {
 
 export default {
   head: {
-    title: 'Aexhell',
+    titleTemplate: '%s - Aexhell',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

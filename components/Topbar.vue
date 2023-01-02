@@ -4,10 +4,10 @@
       Aexhell
     </nuxt-link>
     <div class="axhl__topbar-right z-10">
-      <nuxt-link to="/about" class="uppercase font-sans mr-8 no-underline">
-        About
+      <nuxt-link to="/contact" class="uppercase sm:text-sm text-xs font-sans mr-4 no-underline">
+        Contact
       </nuxt-link>
-      <nuxt-link to="/works" class="uppercase font-sans no-underline">
+      <nuxt-link to="/works" class="uppercase sm:text-sm text-xs font-sans no-underline">
         Works
       </nuxt-link>
     </div>
