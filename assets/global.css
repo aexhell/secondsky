@@ -17,7 +17,8 @@ body {
 }
 
 h1 {
-   @apply font-serif w-full my-6 z-0 relative xl:text-4xl lg:text-2xl text-xl;
+   @apply font-serif w-full my-6 relative xl:text-4xl lg:text-2xl text-xl;
+   z-index: 1;
    color: #ececec;
    text-shadow: 0 0 5px black;
 }
@@ -50,6 +51,7 @@ a {
 
 #axhl__topbar {
    @apply h-8 text-midnight-100;
+   z-index: 2;
    background: rgb(0,0,0);
    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0, 0, 0, 0.5) 50%,  rgba(0,0,0,0) 100%);
 }
