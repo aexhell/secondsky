@@ -1,6 +1,6 @@
 <template>
-  <axhl-content class="mx-auto lg:px-24 px-12 py-24">
-    <article>
+  <axhl-content class="mx-auto h-full lg:px-24 px-12 py-24">
+    <article style="overflow: auto">
       <section class="mb-12">
         <h1>About me.</h1>
         <p>
