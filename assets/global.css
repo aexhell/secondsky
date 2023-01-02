@@ -15,7 +15,6 @@ axhl-content {
    @apply w-full;
    background: radial-gradient(at top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(31, 4, 10, 0.507) 50%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%);
    background-repeat: no-repeat;
-   background-attachment: fixed;
 }
 
 h1 {
