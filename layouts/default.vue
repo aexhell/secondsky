@@ -1,5 +1,5 @@
 <template>
-  <axhl-mount class="w-full h-full flex flex-col">
+  <axhl-mount class="w-full h-full flex flex-col overflow-x-hidden">
     <Topbar />
     <Nuxt />
   </axhl-mount>
