@@ -1,5 +1,5 @@
 <template>
-  <axhl-content class="mx-auto lg:px-24 px-12 py-24">
+  <axhl-content class="h-full mx-auto lg:px-24 px-12 py-24">
     <h1>Welcome to the second sky.</h1>
     <p class="mb-8">
       Name's <b>Aex</b>, aka <code>aexhell</code>. I am a spanish front-end developer creating web applications. I have always been fascinated by the power of the web to connect people,

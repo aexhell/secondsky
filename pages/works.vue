@@ -1,10 +1,10 @@
 <template>
   <axhl-content class="mx-auto lg:px-24 w-screen px-12 py-24">
     <h1>Works</h1>
-    <div id="axhl__works-container" class="w-full grid grid-cols-2 gap-4">
-      <a v-for="work in works" :key="work.code" :href="work.href || '#'" :class="`axhl__work-${work.code} axhl__work p-12 relative`">
+    <div id="axhl__works-container" class="w-full grid md:grid-cols-2 gap-4">
+      <a v-for="work in works" :key="work.code" :href="work.href || '#'" :class="`axhl__work-${work.code} axhl__work h-full p-12 relative`">
         <img class="absolute top-0 w-full h-full object-cover left-0 overflow-hidden" :src="`/img/${work.code}.png`">
-        <div>
+        <div class="relative">
           <h1 class="text-3xl my-4">{{ work.display }}</h1>
           <p class="my-0 italic text-base">{{ work.description }}</p>
         </div>
@@ -28,7 +28,7 @@ export default {
         {
           code: 'mylium',
           display: 'Mylium',
-          description: 'I created this social media for fun. Don\'t think I\'ll get somewhere doing this, but it\'s just fun.',
+          description: 'Social media made with Nuxt.',
           href: 'https://mylium.app/'
         },
         {
