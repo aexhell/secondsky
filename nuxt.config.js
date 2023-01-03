@@ -12,9 +12,17 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'aexhell. front-end developer. reach for the moon.' },
       { name: 'og:title', content: 'Aexhell' },
+      { name: 'og:url', content: 'axhl.me' },
+      { name: 'og:image', content: '/img/banner.png' },
+      { name: 'twitter:image', content: '/img/banner.png' },
+      { name: 'og:image:type', content: 'image/png' },
+      { name: 'og:image:width', content: '1920' },
+      { name: 'og:image:height', content: '1080' },
+      { name: 'og:type', content: 'website' },
+      { name: 'twitter:card', content: 'summary_large_image' },
       { property: 'og:description', content: 'aexhell. front-end developer. reach for the moon.' },
       { name: 'format-detection', content: 'telephone=no' },
-      { name: 'theme-color', content: '#0b0618' }
+      { name: 'theme-color', content: '#320f17' }
     ],
     link: [
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -40,13 +48,6 @@ export default {
   buildModules: [
     '@nuxtjs/tailwindcss'
   ],
-  modules: [
-    '@nuxtjs/pwa'
-  ],
-  pwa: {
-    manifest: {
-      lang: 'en'
-    }
-  },
+  modules: [],
   build: {}
 }

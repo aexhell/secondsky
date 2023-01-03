@@ -1,6 +1,6 @@
 <template>
   <axhl-content class="mx-auto lg:px-24 w-screen px-12 pt-24">
-    <h1>Works</h1>
+    <h1>Works.</h1>
     <div id="axhl__works-container" class="w-full grid md:grid-cols-2 gap-4 mb-12">
       <a v-for="work in works" :key="work.code" :href="work.href || '#'" :class="`axhl__work-${work.code} axhl__work h-full p-12 relative`">
         <img v-if="work.img" class="absolute top-0 w-full h-full object-cover left-0 overflow-hidden" :src="`/img/projects/${work.code}.png`">
