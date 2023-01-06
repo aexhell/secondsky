@@ -1,5 +1,5 @@
 <template>
-  <axhl-content :style="`background: ${post.color}`" class="mx-auto lg:px-24 w-screen px-12 py-24">
+  <axhl-content class="mx-auto lg:px-24 w-screen px-12 py-24">
     <div v-for="posted in posts" v-if="post.found" id="axhl__post-container" :key="posted.code" class="w-full">
       <img v-if="post.img" class="rounded-md w-full h-64 mt-8 object-cover overflow-hidden" :src="posted.img">
       <div>
@@ -37,7 +37,6 @@ export default {
       posts: [
         {
           code: 'find_your_way_home',
-          color: 'black',
           date: '1/2/2023 9:35 PM',
           title: 'Find your way home',
           description: '"What are you?"',
@@ -65,7 +64,7 @@ export default {
       meta: [
         {
           name: 'og:title',
-          content: `${this.post.title || 'Blogs - Aexhell'}`
+          content: `${this.post.title || 'Blogs'} - Aexhell`
         }
       ]
     }
