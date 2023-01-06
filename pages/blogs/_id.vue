@@ -59,13 +59,14 @@ export default {
     }
   },
   head () {
+    let title = this.$route.params.id
     return {
       title: this.post.title,
       meta: [
         {
           hid: 'og:title',
           name: 'og:title',
-          content: `${this.post.title || 'Blogs'} - Aexhell`
+          content: `${title[0].toUpperCase() + title.slice(1).split('_').join(' ') || 'Blogs'} - Aexhell`
         }
       ]
     }
