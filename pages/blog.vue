@@ -29,7 +29,7 @@ export default {
           date: '1/2/2023 9:35 PM',
           display: 'Find your way home.',
           description: '"What are you?"',
-          img: 'https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80'
+          img: 'https://images.pexels.com/photos/1034887/pexels-photo-1034887.jpeg?w=1920&h=1080'
         }
       ]
     }

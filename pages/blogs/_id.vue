@@ -1,5 +1,5 @@
 <template>
-  <axhl-content class="mx-auto lg:px-24 w-screen px-12 py-24">
+  <axhl-content :style="`background: ${post.color}`" class="mx-auto lg:px-24 w-screen px-12 py-24">
     <div v-for="posted in posts" v-if="post.found" id="axhl__post-container" :key="posted.code" class="w-full">
       <img v-if="post.img" class="rounded-md w-full h-64 mt-8 object-cover overflow-hidden" :src="posted.img">
       <div>
@@ -37,10 +37,11 @@ export default {
       posts: [
         {
           code: 'find_your_way_home',
+          color: 'black',
           date: '1/2/2023 9:35 PM',
           title: 'Find your way home',
           description: '"What are you?"',
-          img: 'https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80',
+          img: 'https://images.pexels.com/photos/1034887/pexels-photo-1034887.jpeg?w=1920&h=1080',
           article:
             'It\'s high noon. You are walking through a hilly meadow. The grass greets you. The sun shines on you and warms you. The water envelops the land where you perch. ' +
             'In the meadow, you meet a stout-looking old man in peasant clothes. The old man approaches. He notices your gaze on him, and asks: "what do you think?" ' +
@@ -60,7 +61,13 @@ export default {
   },
   head () {
     return {
-      title: this.post.title
+      title: this.post.title,
+      meta: [
+        {
+          name: 'og:title',
+          content: `${this.post.title || 'Blogs - Aexhell'}`
+        }
+      ]
     }
   },
   mounted () {
