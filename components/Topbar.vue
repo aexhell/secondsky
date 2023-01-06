@@ -4,6 +4,9 @@
       Aexhell
     </nuxt-link>
     <div class="axhl__topbar-right z-10">
+      <nuxt-link to="/blog" class="uppercase sm:text-sm text-xs font-sans mr-4 no-underline">
+        Blog
+      </nuxt-link>
       <nuxt-link to="/contact" class="uppercase sm:text-sm text-xs font-sans mr-4 no-underline">
         Contact
       </nuxt-link>
