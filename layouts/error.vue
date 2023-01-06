@@ -15,9 +15,6 @@
 <script>
 export default {
   name: 'ErrorView',
-  mounted () {
-    window.customElements.define('axhl-mount', class AppDrawer extends HTMLElement {})
-    window.customElements.define('axhl-content', class AppContent extends HTMLElement {})
-  }
+  layout: 'error'
 }
 </script>

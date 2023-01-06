@@ -5,6 +5,9 @@ const _ = {
 }
 
 export default {
+  generate: {
+    fallback: true
+  },
   head: {
     titleTemplate: '%s - Aexhell',
     meta: [

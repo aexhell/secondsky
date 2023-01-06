@@ -65,20 +65,15 @@ export default {
         {
           hid: 'og:title',
           name: 'og:title',
-          content: `${this.$route.params.id[0].toUppercase() + this.$route.params.id.slice(1).split('_').join(' ') || 'Blogs'} - Aexhell`
+          content: `${this.post.title || 'Blogs'} - Aexhell`
         }
       ]
-    }
-  },
-  computed: {
-    currentPost: () => {
-      return this.posts.find(post => post.code === this.$route.params.id)
     }
   },
   mounted () {
     if (!this.$route.params) { return this.$router.push('/blog') }
 
-    const post = this.currentPost()
+    const post = this.posts.find(post => post.code === this.$route.params.id)
     if (!post) { this.post.found = false } else { this.post = post }
   }
 }
