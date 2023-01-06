@@ -11,7 +11,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'aexhell. front-end developer. reach for the moon.' },
-      { name: 'og:title', content: 'Aexhell' },
+      { hid: 'og:title', name: 'og:title', content: 'Aexhell' },
       { name: 'og:url', content: 'axhl.me' },
       { name: 'og:image', content: '/img/banner.png' },
       { name: 'twitter:image', content: '/img/banner.png' },

@@ -63,6 +63,7 @@ export default {
       title: this.post.title,
       meta: [
         {
+          hid: 'og:title',
           name: 'og:title',
           content: `${this.post.title || 'Blogs'} - Aexhell`
         }
