@@ -1,27 +1,39 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./nuxt.config.{js,ts}",
+    "./app.vue",
+  ],
   theme: {
     fontFamily: {
-      serif: 'Hahmlet',
-      sans: 'Inter, sans-serif'
+      sans: ["'Inter'", 'sans-serif']
     },
     extend: {
+      keyframes: {
+        slideup: {
+          '0%': { transform: 'transform(0px, 0px)' },
+          '100%': { transform: 'transform(0px, -15px)' },
+        }
+      },
       colors: {
         transparent: 'transparent',
-        black: '#000000',
+        transculent: '#0000004f',
         white: '#ffffff',
-        midnight: {
-          100: '#0E0B13'
-        },
-        crimson: {
-          100: '#1f040a'
+        black: '#000000',
+        gray: '#333333',
+        aethra: {
+          50: '#100A12',
+          100: '#241F2C',
+          200: '#423B4C',
+          500: '#6E588D',
+          600: '#CAA6FF'
         }
       }
     }
   },
-  variants: {
-    extend: {}
-  },
-  plugins: []
+  plugins: [],
 }

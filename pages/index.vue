@@ -1,28 +1,49 @@
 <template>
-  <axhl-content class="h-full mx-auto lg:px-24 px-12 pt-24">
-    <h1>Welcome to the second sky.</h1>
-    <p class="mb-8">
-      Name's <b>Aex</b>, aka <code>aexhell</code>. I am a spanish front-end developer creating web applications. I have always been fascinated by the power of the web to connect people,
-      and I am excited to be a part of the dynamic field of web development. My goal is to create the best web experience for you.
-    </p>
-    <p class="mb-8">
-      Since I was little I always had an interest in computer science. At the age of 9 (2014), I started experimenting with YoYoGames's GameMaker 8.1, and the GML language.
-      At the age of 13 (2019), I joined Wikia (currently <a href="https://fandom.com">Fandom</a>) and started using it as a CSS playground. At the age of 15 (2020), I started using the Vue framework, and the following year, Nuxt.js.
-      In 2022 when I turned 17, I started using React, especially React Native, apart from Svelte.
-    </p>
-    <nuxt-link to="/contact">
-      <button>_contact</button>
-    </nuxt-link>
-  </axhl-content>
+   <div id="__secondsky-content" class="md:w-1/2 px-8 h-full flex">
+      <article :class="`w-full flex flex-col justify-between my-auto`">
+         <section v-for="sec of sections" v-bind:key="sec.title" :class="`w-full items-${sec.last ? 'end' : 'start'} flex flex-col`">
+            <nuxt-link :to="sec.link" :class="`my-8 transition no-underline hover:underline flex items-${sec.last ? 'start' : 'end'} flex-col hover:-translate-${$i18n.locale === 'en' ? 'y' : 'x'}-6`">
+               <h1 class="uppercase stroke font-black xl:text-8xl lg:text-6xl text-4xl" v-text="$t(sec.title)" />
+               <h2 class="uppercase font-black xl:text-8xl mt-4 lg:text-6xl text-4xl" v-text="$t(sec.sub)" />
+            </nuxt-link>
+         </section>
+      </article>
+   </div>
 </template>
+
+<script setup>
+const i18n = useI18n();
+const title = computed(() => i18n.t('pages.index.title'));
+useSeoMeta({ title: `${title.value} /` });
+</script>
 
 <script>
 export default {
-  name: 'IndexPage',
-  head () {
-    return {
-      title: 'Home'
-    }
-  }
-}
+  inject: ["layout"],
+  data () {
+   return {
+      sections: [
+         {
+            title: 'pages.index.about.title',
+            sub: 'pages.index.about.sub',
+            link: '/about'
+         },
+         {
+            title: 'pages.index.works.title',
+            sub: 'pages.index.works.sub',
+            link: '/works',
+            last: true
+         }
+      ]
+   }
+  },
+  computed: {
+   getTitle () {
+      return this.$t('pages.index.title')
+   }
+  },
+  layout(context) {
+    return 'default';
+  },
+};
 </script>

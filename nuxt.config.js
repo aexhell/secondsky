@@ -1,56 +1,64 @@
-const _ = {
-  capitalize: (str) => {
-    return str[0].toUpperCase() + str.slice(1)
-  }
-}
+import en from './i18n/en';
+import es from './i18n/es';
 
-export default {
-  generate: {
-    fallback: true
-  },
-  head: {
-    titleTemplate: '%s - Aexhell',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'aexhell. front-end developer. reach for the moon.' },
-      { hid: 'og:title', name: 'og:title', content: 'Aexhell' },
-      { name: 'og:url', content: 'axhl.me' },
-      { name: 'og:image', content: '/img/banner.png' },
-      { name: 'twitter:image', content: '/img/banner.png' },
-      { name: 'og:image:type', content: 'image/png' },
-      { name: 'og:image:width', content: '1920' },
-      { name: 'og:image:height', content: '1080' },
-      { name: 'og:type', content: 'website' },
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { property: 'og:description', content: 'aexhell. front-end developer. reach for the moon.' },
-      { name: 'format-detection', content: 'telephone=no' },
-      { name: 'theme-color', content: '#320f17' }
-    ],
-    link: [
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'icon', type: 'image/png', href: '/icon.png' },
-      { rel: 'preconnect', crossorigin: '', href: 'https://fonts.gstatic.com' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap' }
-    ]
-  },
-  globalName: 'secondsky',
-  globals: {
-    id: globalName => `__${globalName}`,
-    nuxt: globalName => `$${globalName}`,
-    context: globalName => `__${globalName.toUpperCase()}__`,
-    pluginPrefix: globalName => globalName,
-    readyCallback: globalName => `on${_.capitalize(globalName)}Ready`,
-    loadedCallback: globalName => `_on${_.capitalize(globalName)}Loaded`
-  },
-  css: [
-    '~/assets/global.css'
-  ],
-  plugins: [],
-  components: true,
-  buildModules: [
-    '@nuxtjs/tailwindcss'
-  ],
-  modules: [],
-  build: {}
-}
+export default defineNuxtConfig({
+   modules: [
+      '@nuxtjs/i18n',
+   ],
+   i18n: {
+      strategy: 'no_prefix',
+      locales: [
+         {
+           code: 'en',
+           name: 'English'
+         },
+         {
+           code: 'es',
+           name: 'Español'
+         }
+      ],
+      vueI18n: {
+         legacy: false,
+         fallbackLocale: 'en',
+         locale: 'en',
+         locales: ['en', 'es'],
+         messages: {
+           en,
+           es
+         }
+      }
+   },
+   generate: {
+      fallback: true
+   },
+   plugins: [],
+   postcss: {
+      plugins: {
+         tailwindcss: {},
+         autoprefixer: {},
+      },
+   },
+   app: {
+      rootId: '__secondsky',
+      head: {
+         titleTemplate: '%s Aexhell',
+         meta: [
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+         ],
+         script: [],
+         link: [
+            { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+            { rel: 'icon', href: '/icon.png', type: 'image/png' },
+            { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap' }
+         ],
+         style: [],
+         noscript: [
+            { children: 'JavaScript is required' }
+         ]
+      }
+   },
+   css: [
+      '@/assets/global.css'
+   ]
+})

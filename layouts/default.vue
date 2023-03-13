@@ -1,16 +1,15 @@
 <template>
-  <axhl-mount class="w-full h-full flex flex-col overflow-x-hidden">
-    <Topbar />
-    <Nuxt />
-  </axhl-mount>
+   <div id="__secondsky-init" class="w-full h-full flex items-center flex-col overflow-y-auto">
+      <Topbar />
+      <slot />
+   </div>
 </template>
 
 <script>
 export default {
-  name: 'LayOut',
-  mounted () {
-    window.customElements.define('axhl-mount', class AppDrawer extends HTMLElement {})
-    window.customElements.define('axhl-content', class AppContent extends HTMLElement {})
-  }
+   name: 'LandingLayout',
+   provide() {
+      return { layout: "default" };
+   }
 }
 </script>

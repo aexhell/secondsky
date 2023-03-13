@@ -1,51 +1,49 @@
 <template>
-  <axhl-content class="mx-auto lg:px-24 w-screen px-12 pt-24">
-    <h1>Works.</h1>
-    <div id="axhl__works-container" class="w-full grid md:grid-cols-2 gap-4 mb-12">
-      <a v-for="work in works" :key="work.code" :href="work.href || '#'" :class="`axhl__work-${work.code} axhl__work h-full p-12 relative`">
-        <img v-if="work.img" class="absolute top-0 w-full h-full object-cover left-0 overflow-hidden" :src="`/img/projects/${work.code}.png`">
-        <div class="relative">
-          <h1 class="font-bold font-sans text-3xl my-0">{{ work.display }}</h1>
-          <p class="my-0 italic text-base">{{ work.description }}</p>
-        </div>
-      </a>
-    </div>
-  </axhl-content>
+   <div id="__secondsky-content" class="md:w-1/2 px-8 pt-32 mb-32 h-full">
+      <h1 class="font-bold mb-8 xl:text-4xl lg:text-2xl md:text-xl sm:text-md" v-text="$t('pages.works.content.title')" />
+      <div class="__secondsky-works flex flex-col my-4">
+         <a v-for="work of projs" :href="work.link" :class="`__secondsky-project-${work.code} w-full mb-4 no-underline bg-transculent border border-gray rounded-md`" v-bind:key="work.code">
+            <img class="w-full h-48 object-top rounded-t-md object-cover border-b border-gray" :src="`/projects/${work.code}.png`">
+            <div class="p-8">
+               <div class="flex w-full items-end justify-between border-b border-gray pb-4">
+                  <h2 class="font-semibold xl:text-4xl lg:text-2xl md:text-xl sm:text-md" v-text="work.title" />
+                  <span v-text="work.details" />
+               </div>
+               <p class="mt-4" v-text="$t(`pages.works.content.works.${work.code}.description`)" />
+            </div>
+         </a>
+      </div>
+   </div>
 </template>
+
+<script setup>
+const i18n = useI18n()
+useSeoMeta({ title: `${i18n.t('pages.works.title')} /` });
+</script>
 
 <script>
 export default {
-  name: 'IndexPage',
-  data () {
-    return {
-      works: [
-        {
-          code: 'puroto',
-          display: 'Puroto',
-          description: 'Worked on this with some friend around Aug 2021 as a front-end developer.',
-          href: 'https://github.com/PurotoApp',
-          img: true
-        },
-        {
-          code: 'mylium',
-          display: 'Mylium',
-          description: 'Social media made with Nuxt, Tailwind and Postgres. I was actually kinda bored.',
-          href: 'https://mylium.app/',
-          img: true
-        },
-        {
-          code: 'secondsky',
-          display: 'Second Sky',
-          description: 'This portfolio. Yeah.',
-          img: false
-        }
-      ]
-    }
-  },
-  head () {
-    return {
-      title: 'Works'
-    }
-  }
-}
+   data () {
+      return {
+         projs: [
+            {
+               code: 'puroto',
+               link: 'https://github.com/purotoapp',
+               title: 'Puroto',
+               details: 'Front-end'
+            },
+            {
+               code: 'mylium',
+               link: 'https://mylium.app',
+               title: 'Mylium',
+               details: 'Full Stack'
+            }
+         ]
+      }
+   },
+   inject: ["layout"],
+   layout(context) {
+      return 'default';
+   }
+};
 </script>
