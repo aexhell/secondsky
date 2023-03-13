@@ -71,6 +71,14 @@ body {
    align-items: flex-end
 }
 
+.hover\:translate-x-6:hover {
+   transform: translateX(1.5rem);
+}
+
+.hover\:-translate-x-6:hover {
+   transform: translateX(-1.5rem);
+}
+
 a {
    @apply underline
 }
