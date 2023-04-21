@@ -3,10 +3,14 @@
 @tailwind utilities;
 
 :root {
-   color-scheme: dark;
+   color-scheme: light;
 }
 
-html, body, #__AXHL_ELIXIR-PROTOCOL, #__secondsky-init {
+:root.dark {
+   color-scheme: dark
+}
+
+html, body, #__AXHL_ELIXIR, #__secondsky-init {
    @apply w-full h-full
 }
 
@@ -29,12 +33,12 @@ html.dark .lifeisshort {
    color: transparent;
 }
 
-html.dark #__AXHL_ELIXIR-PROTOCOL:before {
+html.dark #__AXHL_ELIXIR:before {
    opacity: 0.075;
    filter: none;
 }
 
-#__AXHL_ELIXIR-PROTOCOL:before {
+#__AXHL_ELIXIR:before {
    background: url(/noise.png) repeat;
    filter: invert(1);
    background-size: 50px;

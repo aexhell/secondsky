@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       },
    },
    app: {
-      rootId: '__AXHL_ELIXIR-PROTOCOL',
+      rootId: '__AXHL_ELIXIR',
       head: {
          title: 'Aexhell',
          meta: [
