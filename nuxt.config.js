@@ -1,33 +1,4 @@
-import en from './i18n/en';
-import es from './i18n/es';
-
 export default defineNuxtConfig({
-   modules: [
-      '@nuxtjs/i18n',
-   ],
-   i18n: {
-      strategy: 'no_prefix',
-      locales: [
-         {
-           code: 'en',
-           name: 'English'
-         },
-         {
-           code: 'es',
-           name: 'Español'
-         }
-      ],
-      vueI18n: {
-         legacy: false,
-         fallbackLocale: 'en',
-         locale: 'en',
-         locales: ['en', 'es'],
-         messages: {
-           en,
-           es
-         }
-      }
-   },
    generate: {
       fallback: true
    },
@@ -39,9 +10,9 @@ export default defineNuxtConfig({
       },
    },
    app: {
-      rootId: '__secondsky',
+      rootId: '__AXHL_ELIXIR-PROTOCOL',
       head: {
-         titleTemplate: '%s Aexhell',
+         title: 'Aexhell',
          meta: [
             { name: 'viewport', content: 'width=device-width, initial-scale=1' }
          ],

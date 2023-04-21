@@ -6,107 +6,60 @@
    color-scheme: dark;
 }
 
-html, body, #__secondsky, #__secondsky-init {
+html, body, #__AXHL_ELIXIR-PROTOCOL, #__secondsky-init {
    @apply w-full h-full
 }
 
 html, body {
-   @apply bg-black text-white m-0
+   @apply bg-black text-white-200 m-0;
+   scroll-behavior: smooth;
 }
 
-@keyframes appearance {
-   0% {
-      transform: translateY(1000px);
-   }
-   100% {
-      transform :translateY(0px);
-   }
+.lifeisshort {
+   background: linear-gradient(90deg, #7D5468, #404a6a);
+   background-clip: text;
+   -webkit-background-clip: text;
+   color: transparent;
 }
 
-svg#animated-lines {
+html.dark .lifeisshort {
+   background: linear-gradient(90deg, #FFA4A4, #86A1FF);
+   background-clip: text;
+   -webkit-background-clip: text;
+   color: transparent;
+}
+
+html.dark #__AXHL_ELIXIR-PROTOCOL:before {
+   opacity: 0.075;
+   filter: none;
+}
+
+#__AXHL_ELIXIR-PROTOCOL:before {
+   background: url(/noise.png) repeat;
+   filter: invert(1);
+   background-size: 50px;
+   z-index: -1;
+   position: absolute;
+   content: "";
+   opacity: 0.15;
+   width: 100%;
    height: 100%;
-   opacity: 0.3;
-   width: 150%
 }
 
-svg#animated-lines path {
-   fill: none;
-   stroke: #ffffffad;
-   stroke-width: 0.5px;
-   vector-effect: non-scaling-stroke
+html.dark body {
+   background: radial-gradient(circle at 125% 75%, rgba(90, 154, 126, 0.6) 1% 16.2%, rgba(40, 71, 86, 0.5) 27.84%, rgba(0, 0, 0, 0) 38%),
+               radial-gradient(circle at 10% 135%, rgba(95,90,154,0.6) 1% 16.2%, rgba(40,70,86,0.5) 25.84%, rgba(0,0,0,1) 38%);
 }
 
 body {
    background-repeat: no-repeat;
-   background: linear-gradient(0deg, black, black, transparent), url('/bg.png');
+   background: radial-gradient(circle at 125% 75%, rgba(164, 212, 191, 0.79) 1% 16.2%, rgba(114, 159, 181, 0.5) 27.84%, rgba(202, 202, 202, 0) 38%), 
+               radial-gradient(circle at 10% 135%, rgb(179, 171, 251) 1% 16.2%, rgb(195, 234, 255) 25.84%, #f5f5f5 38%);
    background-size: cover;
-}
-
-#__secondsky-topbar {
-   background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.666))
-}
-
-#__secondsky {
-   background: rgb(0, 0, 0, 0.3)
-}
-
-.stroke {
-   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px #fff, 1px 1px 0 #fff;
-   color: #000
-}
-
-.ml-4 {
-   margin-left: 2rem
-}
-
-.mr-4 {
-   margin-right: 2rem
-}
-
-.items-start {
-   align-items: flex-start
-}
-
-.items-end {
-   align-items: flex-end
-}
-
-.hover\:translate-x-6:hover {
-   transform: translateX(1.5rem);
-}
-
-.hover\:-translate-x-6:hover {
-   transform: translateX(-1.5rem);
+   z-index: 1;
+   position: relative;
 }
 
 a {
    @apply underline
-}
-
-a.router-link-exact-active div .__idunn-sidebar-item-display {
-   font-weight: 700;
-}
-
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.5s;
-}
-.page-enter,
-.page-leave-to {
-  opacity: 0;
-}
-
-.animation-slideup {
-   animation: ease-in-out normal .25s slideup
-}
-
-@keyframes slideup {
-   0% {
-      transform: translateY(-15px);
-      opacity: 0;
-   }
-   100% {
-      transform: translateY(0px);
-      opacity: 1
-   }
 }

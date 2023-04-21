@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
@@ -10,7 +11,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["'Inter'", 'sans-serif']
+      sans: ['"Inter var"', '"Inter"', 'sans-serif']
     },
     extend: {
       keyframes: {
@@ -22,9 +23,13 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         transculent: '#0000004f',
-        white: '#ffffff',
+        white: {
+          100: '#DCDCDC',
+          200: '#E9E9E9',
+          300: '#F5F5F5'
+        },
         black: '#000000',
-        gray: '#333333',
+        gray: '#242424',
         aethra: {
           50: '#100A12',
           100: '#241F2C',
