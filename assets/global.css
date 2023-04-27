@@ -3,11 +3,24 @@
 @tailwind utilities;
 
 :root {
-   color-scheme: light;
+   color-scheme: light
 }
 
 :root.dark {
    color-scheme: dark
+}
+
+body {
+   background-repeat: no-repeat;
+   background: radial-gradient(circle at 125% 75%, rgba(164, 212, 191, 0.79) 1% 16.2%, rgba(114, 159, 181, 0.5) 27.84%, rgba(202, 202, 202, 0) 38%), 
+               radial-gradient(circle at 10% 135%, rgb(179, 171, 251) 1% 16.2%, rgb(195, 234, 255) 25.84%, #f5f5f5 38%);
+   background-size: cover;
+   z-index: 1;
+   position: relative
+}
+
+a {
+   @apply underline
 }
 
 html, body, #__AXHL_ELIXIR, #__secondsky-init {
@@ -16,26 +29,26 @@ html, body, #__AXHL_ELIXIR, #__secondsky-init {
 
 html, body {
    @apply bg-black text-white-200 m-0;
-   scroll-behavior: smooth;
+   scroll-behavior: smooth
 }
 
 .lifeisshort {
    background: linear-gradient(90deg, #7D5468, #404a6a);
    background-clip: text;
    -webkit-background-clip: text;
-   color: transparent;
+   color: transparent
 }
 
 html.dark .lifeisshort {
    background: linear-gradient(90deg, #FFA4A4, #86A1FF);
    background-clip: text;
    -webkit-background-clip: text;
-   color: transparent;
+   color: transparent
 }
 
 html.dark #__AXHL_ELIXIR:before {
    opacity: 0.075;
-   filter: none;
+   filter: none
 }
 
 #__AXHL_ELIXIR:before {
@@ -47,58 +60,46 @@ html.dark #__AXHL_ELIXIR:before {
    content: "";
    opacity: 0.15;
    width: 100%;
-   height: 100%;
+   height: 100%
 }
 
 html.dark .__AXHL-PROJECT::before {
-   filter: invert(0);
-}
-
-html.dark .dark\:hover\:text-white:hover {
-   color: white;
+   filter: contrast(0) invert(1)
 }
 
 @keyframes hoverProject {
    0% {
-      width: 0;
+      width: 0
    }
    100% {
-      width: 100%;
+      width: 100%
    }
 }
 
 .__AXHL-PROJECT:hover::before {
-   animation-play-state: running;
+   animation-play-state: paused;
+   color: #fff;
 }
 
 .__AXHL-PROJECT::before {
-   @apply md:block hidden;
+   @apply md:block hidden text-black;
    content: "";
    background: url(/XMLID_1066_.svg);
    width: 0;
    height: 100%;
    position: absolute;
+   filter: contrast(1) brightness(5) invert(1);
    left: 0px;
    top: 0px;
-   filter: brightness(2) contrast(2) invert(1);
    background-repeat: repeat-x;
-   animation: 15s ease-in-out alternate paused infinite hoverProject
+   animation: 15s ease-out alternate running infinite hoverProject
 }
 
 html.dark body {
    background: radial-gradient(circle at 125% 75%, rgba(90, 154, 126, 0.6) 1% 16.2%, rgba(40, 71, 86, 0.5) 27.84%, rgba(0, 0, 0, 0) 38%),
-               radial-gradient(circle at 10% 135%, rgba(95,90,154,0.6) 1% 16.2%, rgba(40,70,86,0.5) 25.84%, rgba(0,0,0,1) 38%);
+               radial-gradient(circle at 10% 135%, rgba(95,90,154,0.6) 1% 16.2%, rgba(40,70,86,0.5) 25.84%, rgba(0,0,0,1) 38%)
 }
 
-body {
-   background-repeat: no-repeat;
-   background: radial-gradient(circle at 125% 75%, rgba(164, 212, 191, 0.79) 1% 16.2%, rgba(114, 159, 181, 0.5) 27.84%, rgba(202, 202, 202, 0) 38%), 
-               radial-gradient(circle at 10% 135%, rgb(179, 171, 251) 1% 16.2%, rgb(195, 234, 255) 25.84%, #f5f5f5 38%);
-   background-size: cover;
-   z-index: 1;
-   position: relative;
-}
-
-a {
-   @apply underline
+html.dark .dark\:hover\:text-white:hover {
+   color: white
 }
