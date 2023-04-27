@@ -1,5 +1,5 @@
 <template>
-   <div id="__secondsky-content" class="md:w-3/4 px-8 h-full flex">
+   <div id="__secondsky-content" class="md:w-3/4 md:px-8 h-full flex">
       <div class="w-full h-full py-12 my-auto flex">
          <article class="flex justify-between gap-4">
             <section>

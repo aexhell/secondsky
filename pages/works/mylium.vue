@@ -1,6 +1,6 @@
 <template>
-   <div id="__secondsky-content" class="w-full px-8 h-full flex">
-      <div class="py-12 w-3/4 mx-auto flex">
+   <div id="__secondsky-content" class="w-full md:px-12 h-full flex">
+      <div class="py-12 md:w-3/4 w-full mx-auto flex">
          <article class="flex items-start w-full justify-between gap-4">
             <section class="lg:w-2/3 w-1/2 mb-8">
                <h1 class="font-bold xl:text-5xl text-white-200 text-2xl"><span class="lifeisshort">Mylium</span></h1>

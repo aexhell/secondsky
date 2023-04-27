@@ -12,8 +12,8 @@
             <section class="lg:w-1/3 md:w-1/2 w-3/4">
                <h2 class="font-bold xl:text-5xl text-4xl"><span class="lifeisshort">Projects</span></h2>
                <div class="lg:my-12 mt-8 mb-4">
-                  <Project title="Mylium" position="Web Dev" />
-                  <Project title="Elixir" position="This website" />
+                  <Project title="Mylium" link="#" position="Web Dev" />
+                  <Project title="Puroto" link="#" position="Front-end" />
                </div>
                <nuxt-link to="#" class="md:hidden gap-2 flex mt-4 w-fit font-semibold text-gray no-underline hover:underline dark:text-white-200 items-center"><span>See more</span><ArrowRightIcon class="w-4 h-4" /></nuxt-link>
             </section>

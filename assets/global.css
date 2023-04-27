@@ -50,20 +50,39 @@ html.dark #__AXHL_ELIXIR:before {
    height: 100%;
 }
 
-html.dark .__AXHL-PROJECT h2::before {
+html.dark .__AXHL-PROJECT::before {
    filter: invert(0);
 }
 
-.__AXHL-PROJECT h2::before {
+html.dark .dark\:hover\:text-white:hover {
+   color: white;
+}
+
+@keyframes hoverProject {
+   0% {
+      width: 0;
+   }
+   100% {
+      width: 100%;
+   }
+}
+
+.__AXHL-PROJECT:hover::before {
+   animation-play-state: running;
+}
+
+.__AXHL-PROJECT::before {
+   @apply md:block hidden;
    content: "";
    background: url(/XMLID_1066_.svg);
-   width: 100%;
+   width: 0;
    height: 100%;
    position: absolute;
    left: 0px;
    top: 0px;
-   filter: contrast(1) invert(1);
-   background-repeat: no-repeat;
+   filter: brightness(2) contrast(2) invert(1);
+   background-repeat: repeat-x;
+   animation: 15s ease-in-out alternate paused infinite hoverProject
 }
 
 html.dark body {
