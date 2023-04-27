@@ -82,7 +82,6 @@ html.dark .__AXHL-PROJECT::before {
 }
 
 .__AXHL-PROJECT::before {
-   @apply md:block hidden text-black;
    content: "";
    background: url(/XMLID_1066_.svg);
    width: 0;

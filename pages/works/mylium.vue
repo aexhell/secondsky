@@ -9,7 +9,7 @@
                </p>
                <nuxt-link to="/" class="gap-2 flex w-fit font-semibold text-gray no-underline hover:underline dark:text-white-200 items-center"><ArrowLeftIcon class="w-4 h-4" /><span>Go back</span></nuxt-link>
             </section>
-            <section class="md:w-1/3 md:w-1/2 w-full">
+            <section class="md:w-1/2 w-full">
                <h1 class="font-bold xl:text-5xl text-white-200 text-2xl lifeisshort"><span class="lifeisshort">Features</span></h1>
                <div class="mt-12 mb-8">
                   <Project title="Figma" position="Mockup" :link="false" />
