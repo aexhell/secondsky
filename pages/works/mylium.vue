@@ -7,25 +7,21 @@
                <p class="lg:my-12 mt-8 mb-4 w-full md:w-3/4 xl:text-2xl lg:text-lg font-regular text-md text-gray dark:text-white-200 leading-normal">
                   Some random project I made. Currently its development is on hiatus. Sorry. You can visit the project <a href="https://mylium.app">here</a>.
                </p>
-               <nuxt-link to="#" class="md:hidden gap-2 mb-4 flex w-fit font-semibold text-gray no-underline hover:underline dark:text-white-200 items-center"><span>Read more</span><ArrowRightIcon class="w-4 h-4" /></nuxt-link>
+               <nuxt-link to="/" class="gap-2 flex w-fit font-semibold text-gray no-underline hover:underline dark:text-white-200 items-center"><ArrowLeftIcon class="w-4 h-4" /><span>Go back</span></nuxt-link>
             </section>
             <section class="lg:w-1/3 md:w-1/2 w-3/4">
                <h2 class="font-bold xl:text-5xl text-4xl"><span class="lifeisshort">Features</span></h2>
                <div class="lg:my-12 mt-8 mb-4">
-                  <Project title="Mylium" position="Web Dev" />
-                  <Project title="Puroto" link="/works/puroto" position="Front-end" />
+                  <Project title="Nuxt 3" position="Front-end" />
+                  <Project title="Supabase (Postgres)" position="Back-end" />
+                  <Project title="Figma" position="Mock-up" />
                </div>
-               <nuxt-link to="#" class="md:hidden gap-2 flex mt-4 w-fit font-semibold text-gray no-underline hover:underline dark:text-white-200 items-center"><span>See more</span><ArrowRightIcon class="w-4 h-4" /></nuxt-link>
             </section>
          </article>
-         <div class="md:flex hidden w-full justify-between">
-            <nuxt-link to="#" class="gap-2 flex w-fit font-semibold text-gray no-underline hover:underline dark:text-white-200 items-center"><span>Read more</span><ArrowRightIcon class="w-4 h-4" /></nuxt-link>
-            <nuxt-link to="#" class="gap-2 flex w-fit font-semibold text-gray no-underline hover:underline dark:text-white-200 items-center"><span>See more</span><ArrowRightIcon class="w-4 h-4" /></nuxt-link>
-         </div>
       </div>
    </div>
 </template>
 
 <script setup>
-import {ArrowRightIcon} from '@heroicons/vue/24/outline';
+import {ArrowLeftIcon} from '@heroicons/vue/24/outline';
 </script>
