@@ -75,7 +75,7 @@ export default {
          muted: true,
          randnumb: Math.floor(Math.random() * 3),
          theme: 'light',
-         rand: ['exile', 'ethereal', 'smoothoperator']
+         rand: ['altale', 'ethereal', 'smoothoperator']
       }
    }
 }

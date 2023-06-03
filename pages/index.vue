@@ -7,7 +7,7 @@
                <p class="lg:my-12 mt-8 mb-4 w-full md:w-3/4 xl:text-2xl lg:text-lg font-regular text-md text-gray dark:text-white-200 leading-normal">
                   Welcome to my sky. Name's <b>Aex</b>. I surf the Internet as <code>aexhell</code> and work as an interface designer and web developer. Wanna see my works?
                </p>
-               <nuxt-link to="#" class="md:hidden gap-2 mb-4 flex w-fit font-semibold text-gray no-underline hover:underline dark:text-white-200 items-center"><span>Read more</span><ArrowRightIcon class="w-4 h-4" /></nuxt-link>
+               <nuxt-link to="/about" class="md:hidden gap-2 mb-4 flex w-fit font-semibold text-gray no-underline hover:underline dark:text-white-200 items-center"><span>Read more</span><ArrowRightIcon class="w-4 h-4" /></nuxt-link>
             </section>
             <section class="lg:w-1/3 md:w-1/2 w-3/4">
                <h2 class="font-bold xl:text-5xl text-4xl"><span class="lifeisshort">Projects</span></h2>
@@ -15,12 +15,12 @@
                   <Project title="Mylium" link="/works/mylium" position="Web Dev" />
                   <Project title="Puroto" link="/works/puroto" position="Front-end" />
                </div>
-               <nuxt-link to="#" class="md:hidden gap-2 flex mt-4 w-fit font-semibold text-gray no-underline hover:underline dark:text-white-200 items-center"><span>See more</span><ArrowRightIcon class="w-4 h-4" /></nuxt-link>
+               <nuxt-link to="/works" class="md:hidden gap-2 flex mt-4 w-fit font-semibold text-gray no-underline hover:underline dark:text-white-200 items-center"><span>See more</span><ArrowRightIcon class="w-4 h-4" /></nuxt-link>
             </section>
          </article>
          <div class="md:flex hidden w-full justify-between">
-            <nuxt-link to="#" class="gap-2 flex w-fit font-semibold text-gray no-underline hover:underline dark:text-white-200 items-center"><span>Read more</span><ArrowRightIcon class="w-4 h-4" /></nuxt-link>
-            <nuxt-link to="#" class="gap-2 flex w-fit font-semibold text-gray no-underline hover:underline dark:text-white-200 items-center"><span>See more</span><ArrowRightIcon class="w-4 h-4" /></nuxt-link>
+            <nuxt-link to="/about" class="gap-2 flex w-fit font-semibold text-gray no-underline hover:underline dark:text-white-200 items-center"><span>Read more</span><ArrowRightIcon class="w-4 h-4" /></nuxt-link>
+            <nuxt-link to="/works" class="gap-2 flex w-fit font-semibold text-gray no-underline hover:underline dark:text-white-200 items-center"><span>See more</span><ArrowRightIcon class="w-4 h-4" /></nuxt-link>
          </div>
       </div>
    </div>

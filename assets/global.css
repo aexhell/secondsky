@@ -23,6 +23,10 @@ a {
    @apply underline
 }
 
+h1, h2 {
+   @apply font-serif
+}
+
 html, body, #__AXHL_ELIXIR, #__secondsky-init {
    @apply w-full h-full
 }
@@ -92,6 +96,12 @@ html.dark .__AXHL-PROJECT::before {
    top: 0px;
    background-repeat: repeat-x;
    animation: 15s ease-out alternate running infinite hoverProject
+}
+
+.__secondsky-project:before {
+   @apply w-full h-full top-0 left-0 absolute rounded-md;
+   content: "";
+   background: linear-gradient(90deg, black, #000000d4, transparent)
 }
 
 html.dark body {

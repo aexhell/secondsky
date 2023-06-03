@@ -11,7 +11,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['"Inter var"', '"Inter"', 'sans-serif']
+      sans: ['"Inter var"', '"Inter"', 'sans-serif'],
+      serif: ['"Rufina"', 'serif']
     },
     extend: {
       keyframes: {
