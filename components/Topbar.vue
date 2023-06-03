@@ -28,8 +28,8 @@
             </div>
          </ul>
          <audio loop>
-            <source :src="`/${rand[Math.floor(Math.random() * 3)]}.ogg`" type="audio/ogg">
-            <source :src="`/${rand[Math.floor(Math.random() * 3)]}.mp3`" type="audio/mpeg">
+            <source :src="`/${rand[randnumb]}.ogg`" type="audio/ogg">
+            <source :src="`/${rand[randnumb]}.mp3`" type="audio/mpeg">
             Your browser does not support the audio element.
          </audio>
       </nav>
@@ -74,8 +74,9 @@ export default {
    data () {
       return {
          muted: true,
+         randnumb: Math.floor(Math.random() * 3),
          theme: 'light',
-         rand: ['ethereal', 'smoothoperator', 'exile']
+         rand: ['exile', 'ethereal', 'smoothoperator']
       }
    }
 }

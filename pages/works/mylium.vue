@@ -9,11 +9,11 @@
                </p>
                <nuxt-link to="/" class="gap-2 flex w-fit font-semibold text-gray no-underline hover:underline dark:text-white-200 items-center"><ArrowLeftIcon class="w-4 h-4" /><span>Go back</span></nuxt-link>
             </section>
-            <section class="lg:w-1/3 md:w-1/2 w-3/4">
+            <section class="lg:w-1/2 md:w-1/2 w-3/4 md:mt-0 my-4">
                <h2 class="font-bold xl:text-5xl text-4xl"><span class="lifeisshort">Features</span></h2>
                <div class="lg:my-12 mt-8 mb-4">
                   <Project title="Nuxt 3" position="Front-end" />
-                  <Project title="Supabase (Postgres)" position="Back-end" />
+                  <Project title="Supabase" position="Back-end" />
                   <Project title="Figma" position="Mock-up" />
                </div>
             </section>
