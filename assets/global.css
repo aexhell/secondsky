@@ -98,10 +98,14 @@ html.dark .__AXHL-PROJECT::before {
    animation: 15s ease-out alternate running infinite hoverProject
 }
 
+html.dark .__secondsky-project:before {
+   background: linear-gradient(90deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.831), transparent)
+}
+
 .__secondsky-project:before {
    @apply w-full h-full top-0 left-0 absolute rounded-md;
    content: "";
-   background: linear-gradient(90deg, black, #000000d4, transparent)
+   background: linear-gradient(270deg, transparent, rgba(0, 0, 0, 0.514), rgb(22, 21, 21))
 }
 
 html.dark body {
