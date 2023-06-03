@@ -65,11 +65,6 @@ export default {
          }
       }
    },
-   beforeMount () {
-       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-         document.documentElement.classList.add('dark')
-      }
-   },
    mounted () {
        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
          this.theme = 'dark'

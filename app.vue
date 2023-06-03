@@ -4,19 +4,12 @@
   </NuxtLayout>
 </template>
 
-<script>
-export default {
-  transition(to, from) {
-    if (!from) {
-      return 'slide-left'
-    }
-
-    return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
-  }
-}
-</script>
-
 <script setup>
+useHead({
+  script: [
+    { children: '/* Not clean, but practical way to get Nuxt add the dark class on load. Ran out of ideas. */\n\nif (window.matchMedia && window.matchMedia(\'(prefers-color-scheme: dark)\').matches) {document.documentElement.classList.add(\'dark\');}'}
+  ]
+})
 useServerSeoMeta({
   ogTitle: 'Aexhell',
   description: 'Web Dev / UX Designer',
