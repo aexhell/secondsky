@@ -26,8 +26,8 @@ export default {
          type: String
       },
       link: {
-         default: true,
-         type: Boolean
+         default: null,
+         type: String
       }
    }
 }

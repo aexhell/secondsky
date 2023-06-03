@@ -1,6 +1,6 @@
 <template>
    <div id="__secondsky-content" class="md:w-3/4 md:px-8 h-full flex">
-      <div class="w-full h-full py-12 my-auto flex flex-col">
+      <div class="w-full h-full xl:py-12 md:py-8 py-4 my-auto flex flex-col">
          <article class="flex md:flex-row md:items-start items-center flex-col justify-between gap-4">
             <section class="lg:w-2/3 w-3/4 mb-4">
                <h2 class="font-bold xl:text-5xl text-gray dark:text-white-200 text-4xl">“Life is <span class="lifeisshort">short</span>.”</h2>
